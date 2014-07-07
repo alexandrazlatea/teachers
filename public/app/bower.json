@@ -1,0 +1,25 @@
+{
+  "name": "angular",
+  "version": "0.0.0",
+  "authors": [
+    "alexandra.zlatea <alexandra.zlatea@arobs.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "angular": "~1",
+    "bootstrap": "~3",
+    "fontawesome": "~4.0.3",
+    "angular-resource": "",
+    "qunit": "",
+    "angular-ui-router": "~0.2.10",
+    "validate": "~0.2.0"
+  }
+}

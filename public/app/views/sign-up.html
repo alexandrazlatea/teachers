@@ -1,0 +1,47 @@
+﻿<div class="col-md-offset-3 col-md-6">
+  <div class="box">
+    <header>
+      <h1>Sign up</h1>
+    </header>
+    <section>
+      <form class="form-horizontal" role="form" name="teacherForm" novalidate="">
+        <validation-summary errors="viewModel.errors"></validation-summary>
+        <div class="form-group">
+          <label for="inputFirstName" class="col-sm-3 control-label">First name</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" name="firstName" data-ng-model="viewModel.model.firstName" placeholder="First name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputLastName" class="col-sm-3 control-label">Last name</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" name="lastName" data-ng-model="viewModel.model.lastName"  placeholder="Last name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputCnp" class="col-sm-3 control-label">CNP</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" name="cnp" data-ng-model="viewModel.model.cnp" placeholder="CNP">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail" class="col-sm-3 control-label" >Email</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" name="email" ng-model="viewModel.model.email" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword" class="col-sm-3 control-label">Password</label>
+          <div class="col-sm-9">
+            <input type="password" class="form-control" name="password" ng-model="viewModel.model.password"  placeholder="Password">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-3 col-sm-9">
+            <button type="button" ng-click="viewModel.addTeacher(teacherForm)" class="btn btn-primary">Sign up</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </div>
+</div>

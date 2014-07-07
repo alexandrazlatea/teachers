@@ -1,0 +1,24 @@
+<div ng-hide="isBusy">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            My Courses
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <ul class="list-group">
+                    <li class="list-group-item">
+
+                        <input type="text" placeholder="Search..." ng-model="filter" class="bullet-input form-control">
+
+                    </li>
+                    <li class="list-group-item" ng-repeat="course in viewModel.courses| filter:filter ">
+                        <a  data-toggle="modal" data-target="#myModal">
+                            {{course.title}}
+                        </a> 
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+     
+
