@@ -15,8 +15,9 @@ function CoursesProfileViewModel(coursesService, profileService) {
         self.courses = [];
         var courses = result.data;
         angular.forEach(courses, function(value, key) {
-            var key = Object.keys(value)[0];
-            this.push(value[key]);
+            angular.forEach(value, function(valueObject, key) {
+                self.courses.push(valueObject);
+            });
         }, self.courses);
     };
     var onGetCoursesError = function(result) {
@@ -48,7 +49,6 @@ function CoursesProfileViewModel(coursesService, profileService) {
     };
     this.addCourse = function() {
         self.isBusy = true;
-        console.log(self.course, 'course');
         coursesService.addCourseAsync(self.course, onAddCourseSucces, onAddCourseError);
     };
 

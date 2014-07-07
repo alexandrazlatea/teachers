@@ -6,10 +6,11 @@
 
   this.addCourseAsync = function (course, onSuccess, onError) {
     $http.post('https://teachersangular.firebaseio.com/courses/'+course.user_id+'.json', course).then(function(error) {
+                onSuccess();
+
       if (error) {
         onError(error);
       } else {
-        onSuccess();
       }
     });
   };
